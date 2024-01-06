@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# .gitignore
+
+# Node.js
+/node_modules
+
+# Environment variables file
+.env
+package-lock.json
+package.json
