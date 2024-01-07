@@ -47,8 +47,15 @@ export const Banner = () => {
       setIndex(prevIndex => prevIndex + 1);
     }
   }
+  const handleDownload = () => {
+    // Replace 'YOUR_GOOGLE_DRIVE_LINK' with the actual link to your resume file
+    const resumeLink = 'https://drive.google.com/file/d/16Ggc7rrSCDl8uCT1XPbsLRQb-ERPFccS/view?usp=sharing';
 
-  return (
+    // Open the link in a new tab
+    window.open(resumeLink, '_blank');
+  };
+
+  return (  
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
@@ -56,10 +63,10 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
+                <span className="tagline">Welcome to my Portfolio</span>              
                 <h1>{`Hi! I'm krish`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "MernStack Developer", "Cloud,DevOps,AI Enthusist" ]'><span className="wrap">{text}</span></span></h1>
                   <p>As a MERN stack enthusiast, I thrive in crafting seamless user experiences while delving deep into backend intricacies. Beyond coding, I harbor a fascination for DevOps methodologies and cloud innovations. Eager to merge my frontend finesse, backend prowess, and DevOps intrigue, I seek a role that not only values my existing skills but propels me into new realms of expertise. Let's embark on a journey where code meets innovation, and every challenge is an opportunity for growth.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={handleDownload}>Download my resume here.. <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
